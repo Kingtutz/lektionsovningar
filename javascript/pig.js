@@ -8,14 +8,7 @@ const roundNum = document.querySelector('#rounds')
 const totalScoreEl = document.querySelector('#totalscore')
 const diceDiv = document.querySelector('#dicediv')
 
-const dieArr = [
-  'die one',
-  'die two',
-  'die three',
-  'die four',
-  'die five',
-  'die six'
-]
+const dieArr = ['one', 'two', 'three', 'four', 'five', 'six']
 
 let totalScore = 0
 let roundScore = 0
@@ -44,7 +37,10 @@ function nameInput (event) {
 function roll (event) {
   const randomNum = 1 + Math.floor(Math.random() * 6)
   console.log(randomNum)
+  let arr = `${dieArr[randomNum - 1]}`
+  console.log(arr)
   diceDiv.innerHTML = ''
+  diceDiv.classList.remove('die', 'one', 'two', 'three', 'four', 'five', 'six')
   for (let i = 0; i < randomNum; i++) {
     const addDieDiv = document.createElement('div')
     diceDiv.appendChild(addDieDiv)
@@ -56,17 +52,16 @@ function roll (event) {
   } else {
     roundScore += randomNum
   }
+  diceDiv.classList.add('die', arr)
 
   roundScoreText.innerText = `Round score: ${roundScore}`
   roundNum.innerText = `Rounds: ${rounds}`
-  console.log(i, roundScore)
 
   if (totalScore + roundScore >= 100) {
     scoreDiv.classList.remove('flexcol')
     scoreDiv.classList.add('hide')
     document.querySelector('#congrats').classList.remove('hide')
   }
-  diceDiv.classList.add(`${dieArr[randomNum]}`)
 }
 
 function stay (event) {
