@@ -108,6 +108,24 @@ function addItem (event) {
 }
 
 // random
+
+const nolltillnitionio = Math.random() * 100
+console.log(nolltillnitionio)
+
+const nolltill39 = Math.floor(Math.random() * 40)
+console.log(nolltill39)
+
+const tretiotillnitonio = 30 + Math.floor(Math.random() * 70)
+console.log(tretiotillnitonio)
+
+const fyratilltio = 4 + Math.floor(Math.random() * 6)
+console.log(fyratilltio)
+
+const array = ['hotpink', 'skyblue', 'violet', 'lightgreen', 'orange']
+const index = Math.floor(Math.random() * array.length)
+console.log(array[index])
+
+// Event & random
 const colorArr = [
   'red',
   'blue',
