@@ -8,6 +8,7 @@ let cscore = 0
 function getNumbers () {
   const playerNumber = Math.floor(Math.random() * 100)
   const computerNumber = Math.floor(Math.random() * 100)
+  console.log(playerNumber, computerNumber)
   if (playerNumber > computerNumber) {
     pscore += 1
   } else if (playerNumber < computerNumber) {
