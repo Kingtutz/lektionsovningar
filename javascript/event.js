@@ -154,6 +154,6 @@ function changeColor (event) {
     colorH1.style.backgroundColor = 'white'
   }
   function bgChange (event) {
-    colorH1.style.backgroundColor = colorArr[randomIndex]
+    document.body.style.backgroundColor = colorArr[randomIndex]
   }
 }
