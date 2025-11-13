@@ -91,15 +91,16 @@ function addItem (event) {
   const item = shopinglist.querySelector('#item')
   const amount = shopinglist.querySelector('#amount')
   const liEl = document.createElement('li')
-  liEl.innerText = `${amount.value} x ${item.value}`
   shopinglistDiv.appendChild(liEl)
-  if (amount.value < 3) {
-    liEl.style.backgroundColor = 'green'
-  } else if (amount.value > 3 && amount.value < 6) {
-    liEl.style.backgroundColor = 'blue'
-  } else {
-    liEl.style.backgroundColor = 'red'
-  }
+  liEl.innerText = `${amount.value} x ${item.value}`
+  liEl.style.backgroundColor = `hsl(${amount.value * 5},80%,80%)`
+  // if (amount.value < 3) {
+  //   liEl.style.backgroundColor = 'green'
+  // } else if (amount.value > 3 && amount.value < 6) {
+  //   liEl.style.backgroundColor = 'blue'
+  // } else {
+  //   liEl.style.backgroundColor = 'red'
+  // }
   liEl.addEventListener('click', remove)
   function remove (remove) {
     liEl.remove()

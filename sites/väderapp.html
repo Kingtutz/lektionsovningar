@@ -4,16 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/styles.css" />
-    <script src="../javascript/Högstanr.js" defer></script>
-    <title>Events</title>
+    <link rel="stylesheet" href="../css/väder.css" />
+    <script src="../javascript/väderapp.js" defer></script>
+    <title>Document</title>
   </head>
   <body>
-    <header>
     <header>
       <a href="../index.html">Hem</a>
       <a href="övning-events.html">Events</a>
       <a href="väderapp.html">Väderapp</a>
-    </header>
     </header>
     <header id="header2">
       <h3>Minispel:</h3>
@@ -22,26 +21,23 @@
       <a href="Gissanummer.html">Gissa Numret!</a>
       <a href="pig.html">Pig!</a>
     </header>
-    <main>
-      <div class="flexcol">
-        <h1>Högsta Numret!</h1>
-        <div class="flexrow">
-          <div class="players">
-            <h2>Player</h2>
-            <h3>Score:</h3>
-            <h2 id="playerscore"></h2>
-          </div>
-          <div class="players">
-            <h2>Computer</h2>
-            <h3>Score:</h3>
-            <h2 id="computerscore"></h2>
-          </div>
-        </div>
-        <button id="randombtn">Random number</button>
+    <main class="flexcol">
+      <form>
+        <input type="text" placeholder="Sök på en stad!" />
+        <button>Sök</button>
+      </form>
+      <div>
+        <h3 id#cityname></h3>
       </div>
+      <div id="card" class="flexcol">
+        <h2>Malmö</h2>
+        <h1>⛅</h1>
+        <h3>20grader</h3>
+        <h5>molningt</h5>
+        <h5>10m/s ↖</h5>
+      </div>
+      <div id="modal">Error could not find city</div>
     </main>
-    <footer>
-      <div></div>
-    </footer>
+    <footer></footer>
   </body>
 </html>

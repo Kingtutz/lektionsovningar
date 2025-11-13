@@ -1,0 +1,10 @@
+#card{
+  width: 300px;
+height: 400px;
+background: #abe7ff;
+background: linear-gradient(327deg, rgba(171, 231, 255, 1) 0%, rgba(209, 224, 218, 1) 45%, rgba(237, 221, 83, 1) 100%);
+}
+
+#modal{
+  display: none;
+}
