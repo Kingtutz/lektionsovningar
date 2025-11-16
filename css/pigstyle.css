@@ -118,3 +118,16 @@ button{
 .six > :nth-child(5), .six > :last-child{
     align-self: flex-end;
 }
+
+#pigprogress{
+    position: sticky;
+    top: 0;
+    height: 2rem;
+    width: 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+
+

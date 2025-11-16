@@ -7,8 +7,12 @@ const roundScoreText = document.querySelector('#roundscore')
 const roundNum = document.querySelector('#rounds')
 const totalScoreEl = document.querySelector('#totalscore')
 const diceDiv = document.querySelector('#dicediv')
-
+const newGame = document.querySelector('#newgame')
+// const winnerScreen = document.querySelector('#congrats')
+const progressBar = document.querySelector('#pigprogress')
 const dieArr = ['one', 'two', 'three', 'four', 'five', 'six']
+const congratsdiv = document.querySelector('#winningscreen')
+const congratsText = document.querySelector('#congratstext')
 
 let totalScore = 0
 let roundScore = 0
@@ -17,6 +21,7 @@ let rounds = 0
 staybtn.addEventListener('click', stay)
 form.addEventListener('submit', nameInput)
 rollbtn.addEventListener('click', roll)
+newGame.addEventListener('click', restart)
 
 function nameInput (event) {
   event.preventDefault()
@@ -30,7 +35,8 @@ function nameInput (event) {
   roundNum.innerText = `rounds: ${rounds}`
   roundScoreText.innerText = `Round score: ${roundScore}`
   totalScoreEl.innerText = `Total score: ${totalScore}`
-
+  progressBar.classList.remove('hide')
+  progressBar.classList.add('show')
   form.reset()
 }
 
@@ -56,17 +62,37 @@ function roll (event) {
 
   roundScoreText.innerText = `Round score: ${roundScore}`
   roundNum.innerText = `Rounds: ${rounds}`
-
-  if (totalScore + roundScore >= 100) {
-    scoreDiv.classList.remove('flexcol')
-    scoreDiv.classList.add('hide')
-    document.querySelector('#congrats').classList.remove('hide')
-  }
 }
 
 function stay (event) {
   totalScore += roundScore
-  roundScore = 0
   rounds++
   totalScoreEl.innerText = `Total score: ${totalScore}`
+  progressBar.style.width = totalScore + '%'
+  progressBar.style.backgroundColor = `hsl(160, ${totalScore}%, 70%)`
+  progressBar.innerText = '🐷'
+  if (totalScore >= 100) {
+    scoreDiv.classList.remove('flexcol')
+    scoreDiv.classList.add('hide')
+    congratsdiv.classList.remove('hide')
+    congratsdiv.classList.add('show')
+    congratsdiv.classList.add('flexcol')
+    progressBar.classList.remove('show')
+    progressBar.classList.add('hide')
+    progressBar.style.width = '0%'
+    progressBar.innerText = ''
+
+    congratsText.innerHTML = `<h1>Congrats you win! <br> It took you ${roundScore} rounds!</h1>
+    </div>`
+  }
+  roundScore = 0
+}
+function restart (event) {
+  congratsdiv.classList.add('hide')
+  congratsdiv.classList.remove('show')
+  congratsdiv.classList.remove('flexcol')
+
+  formBox.classList.remove('hide')
+  formBox.classList.add('show')
+  formBox.classList.add('flexcol')
 }
