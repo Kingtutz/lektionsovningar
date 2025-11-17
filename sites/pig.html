@@ -8,6 +8,7 @@
     <title>Pig</title>
   </head>
   <body>
+    <div id="pigprogress" class="hide"></div>
     <main id="formbox" class="flexcol">
       <h3>Enter a pig name and click the snout!</h3>
       <form id="form" class="flexrow">
@@ -20,19 +21,15 @@
       <h3 id="totalscore"></h3>
       <h3 id="rounds"></h3>
       <h3 id="roundscore"></h3>
-      <div id="dicediv" class="">
-       
-      </div>
+      <div id="dicediv" class=""></div>
       <div class="flexrow">
         <button id="rollbtn">Roll</button>
         <button id="staybtn">Stay</button>
       </div>
-      
     </div>
-    <div id="congrats" class="hide","fle"><h1>Congrats you won!!!</h1></div>
-
-
+    <div id="winningscreen" class="hide">
+      <div id="congratstext"></div>
+      <div><button id="newgame">New game!</button></div>
     </div>
-
   </body>
 </html>
