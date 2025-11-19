@@ -36,7 +36,6 @@ function nameInput (event) {
   roundScoreText.innerText = `Round score: ${roundScore}`
   totalScoreEl.innerText = `Total score: ${totalScore}`
   progressBar.classList.remove('hide')
-  progressBar.classList.add('show')
   form.reset()
 }
 
@@ -75,13 +74,10 @@ function stay (event) {
     scoreDiv.classList.remove('flexcol')
     scoreDiv.classList.add('hide')
     congratsdiv.classList.remove('hide')
-    congratsdiv.classList.add('show')
     congratsdiv.classList.add('flexcol')
-    progressBar.classList.remove('show')
     progressBar.classList.add('hide')
     progressBar.style.width = '0%'
     progressBar.innerText = ''
-
     congratsText.innerHTML = `<h1>Congrats you win! <br> It took you ${roundScore} rounds!</h1>
     </div>`
   }
@@ -91,8 +87,6 @@ function restart (event) {
   congratsdiv.classList.add('hide')
   congratsdiv.classList.remove('show')
   congratsdiv.classList.remove('flexcol')
-
   formBox.classList.remove('hide')
-  formBox.classList.add('show')
   formBox.classList.add('flexcol')
 }
