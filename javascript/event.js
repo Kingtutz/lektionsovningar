@@ -58,7 +58,9 @@ function pleave () {
 }
 
 document.body.addEventListener('mousemove', event => {
-  document.body.style.backgroundColor = `hsl(0,${event.clientX}%,${event.clientY}%)`
+  document.body.style.backgroundColor = `hsl(0,${
+    (event.clientX / innerWidth) * 100
+  }%,${100 - (event.clientY / innerHeight) * 100}%)`
 })
 
 // List
