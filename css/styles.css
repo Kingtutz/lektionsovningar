@@ -6,18 +6,63 @@
   --c:#533261;
   
 }
+header {
+        background-color: var(--c1);
+        padding: 16px 0;
+        margin: 10px 50px 0px;
+        margin-bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+      }
+      
+      header a {
+        margin: 0px 10px;
+        text-decoration: none;
+        color: #333;
+        padding: 8px 12px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+      }
+      
+      header a:hover {
+        background-color:var(--c4);
+        color: var(--c3);
+      }
+      
+      header a.active {
+        background-color:var(--c4);
+        color: var(--c3);
+      }
+      
+      header h3 {
+        margin: 0 15px 5px 15px;
+        color: var(--c3);
+        font-size: 14px;
+      }
+      
+      #main-nav {
+        background-color: var(--c1);
+        border-radius: 10px 10px 0px 0px;
+      }
+      
+      #games-nav {
+        background-color: var(--c2);
+        margin-top: 0;
+        border-radius: 0px 0px 10px 10px;
+        margin-bottom: 16px;
+      }
 body{
-  background-color:var(--c2);
-  color:var(--c4);
+  background-color:var(--c4);
+  color:var(--c3);
   width: 100vw;
   height: 100vh;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
 
 }
-header{
-  background-color: var(--c1);
-}
+
 main{
   display: flex;
   flex-direction: row;
@@ -42,19 +87,29 @@ a{
 .flexrow{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
   justify-items: center;
+  align-items: center;
   column-gap: 50px;
+}
+.buttombox{
+  display: flex;
+  justify-content: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  gap: 16px
 }
 #randombtn{
   width: 100px;
   align-self: center;
-  background-color: #334e58;
+  background-color: var(--c1);
   border-radius: 10px;
+  color: var(--c3);
 }
 .players{
   justify-items: center;
-  border:2px solid #334e58;
+  border:2px solid var(--c3);
   border-radius: 10px;
   width: 150px;
   margin: 20px;
@@ -64,8 +119,15 @@ a{
   height: 200px;
   justify-items: center;
   align-content: center;
-  border: #334e58 solid 2px;
+  border: var(--c3) solid 2px;
   border-radius: 10px;
   margin-top: 20px;
+} 
+button{
+  
+  align-self: center;
+  background-color: var(--c1);
+  border-radius: 10px;
+  color: var(--c3);
 }
 
