@@ -20,8 +20,7 @@ class PageHeader {
           { text: 'Väderapp', href: 'sites/väderapp.html' },
           { text: 'Api', href: 'sites/api.html' },
           { text: 'Api/fetch', href: 'sites/apifetch.html' },
-          
-          
+          { text: 'async', href: 'sites/async.html' }
         ]
       },
       games: {
@@ -30,7 +29,9 @@ class PageHeader {
           { text: 'Högsta nummret', href: 'sites/Högstanummret.html' },
           { text: 'Gissa Färgen!', href: 'sites/Gissafärg.html' },
           { text: 'Gissa Numret!', href: 'sites/Gissanummer.html' },
-          { text: 'Pig!', href: 'sites/pig.html' }
+          { text: 'Pig!', href: 'sites/pig.html' },
+          { text: 'Flag game!', href: 'sites/flaggame.html' },
+          { text: 'Quiz!', href: 'sites/quiz.html' }
         ]
       }
     }
@@ -117,7 +118,7 @@ class PageHeader {
     //     margin-bottom: 10px;
     //     border-bottom: 1px solid #ddd;
     //   }
-      
+
     //   header a {
     //     margin: 0 15px;
     //     text-decoration: none;
@@ -126,26 +127,26 @@ class PageHeader {
     //     border-radius: 4px;
     //     transition: background-color 0.3s ease;
     //   }
-      
+
     //   header a:hover {
     //     background-color: #e0e0e0;
     //   }
-      
+
     //   header a.active {
     //     background-color: #007bff;
     //     color: white;
     //   }
-      
+
     //   header h3 {
     //     margin: 0 15px 5px 15px;
     //     color: #666;
     //     font-size: 14px;
     //   }
-      
+
     //   #main-nav {
     //     background-color: #f8f9fa;
     //   }
-      
+
     //   #games-nav {
     //     background-color: #e9ecef;
     //   }

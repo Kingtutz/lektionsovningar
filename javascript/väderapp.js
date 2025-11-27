@@ -3,6 +3,7 @@ const weatherDiv = document.createElement('div')
 const cityName = document.createElement('h3')
 const weatherIconEl = document.createElement('img')
 const windEl = document.createElement('p')
+const grader = document.createElement('p')
 const weatherConditionEl = document.createElement('p')
 
 form.addEventListener('submit', cityInput)
@@ -47,6 +48,8 @@ async function getData (input) {
 
         const result = await response.json()
         const degres = result.main.temp - 273.15
+        weatherDiv.append(grader)
+        grader.innerText = degres + 'c'
         const iconId = result.weather[0].id
         const weaterCondition = result.weather[0].main
 

@@ -1,10 +1,9 @@
 const form = document.querySelector('#form')
-const imgDiv = document.querySelector('#dogpics')
 const reset = document.querySelector('#reset')
 const form2 = document.querySelector('#form2')
 
 reset.addEventListener('click', reset => {
-  imgDiv.innerHTML = ''
+  output.innerHTML = ''
 })
 
 form.addEventListener('submit', event => {
@@ -62,7 +61,6 @@ form3.addEventListener('submit', event => {
   fetch(url)
     .then(function (response) {
       console.log(response)
-
       return response.json()
     })
     .then(function (data) {
@@ -71,6 +69,35 @@ form3.addEventListener('submit', event => {
       const img = document.createElement('img')
       output.appendChild(img)
       img.src = data[0].flags.svg
+      img.width = 200
+    })
+    .catch(function (error) {
+      console.log(error)
+    })
+})
+form4.addEventListener('submit', event => {
+  event.preventDefault()
+  const url = `https://restcountries.com/v3.1/lang/${lang.value}`
+  console.log(url)
+  fetch(url)
+    .then(function (response) {
+      return response.json()
+    })
+    .then(function (data) {
+      console.log(data)
+      output.innerHTML = ''
+      for (const coutrys of data) {
+        const img = document.createElement('img')
+        const name = document.createElement('p')
+        const region = document.createElement('p')
+        output.append(img)
+        img.src = coutrys.flags.png
+        output.append(name)
+        name.innerText = coutrys.name.common
+        output.append(region)
+        region.innerText = coutrys.region
+        img.width = 200
+      }
     })
     .catch(function (error) {
       console.log(error)
