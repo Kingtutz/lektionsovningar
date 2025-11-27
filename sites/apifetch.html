@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../javascript/pageelements.js" defer></script>
+    <script src="../javascript/apifetch.js" defer></script>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="flexcol">
+      <button id="reset">reset</button>
+      <div class="flexcol">
+        <h1>Dog pics</h1>
+        <form id="form">
+          <input type="text" id="breed" placeholder="breed" />
+          <input
+            type="number"
+            name=""
+            id="amount"
+            placeholder="Amount of pics"
+          />
+          <button>search</button>
+        </form>
+      </div>
+      <div class="flexcol">
+        <h1>Chuck norris joke</h1>
+
+        <form id="form2">
+          <label for="cars">Choose a catagory:</label>
+          <select id="catagory" name="cars">
+            <option value="animal">animal</option>
+            <option value="career">career</option>
+            <option value="celebrity">celebrity</option>
+            <option value="dev">dev</option>
+            <option value="explicit">explicit</option>
+            <option value="fashion">fashion</option>
+            <option value="food">food</option>
+            <option value="history">history</option>
+            <option value="money">money</option>
+            <option value="movie">movie</option>
+            <option value="music">music</option>
+            <option value="political">political</option>
+            <option value="religion">religion</option>
+            <option value="science">science</option>
+            <option value="sport">sport</option>
+            <option value="travel">travel</option>
+          </select>
+          <button>search</button>
+        </form>
+        <div class="flexcol">
+          <h1>Flags</h1>
+          <form id="form3">
+            <input
+              type="text"
+              id="country"
+              placeholder="search for a country"
+            />
+            <button>search</button>
+          </form>
+        </div>
+        <div id="output" class="flexcol"></div>
+      </div>
+    </main>
+  </body>
+</html>

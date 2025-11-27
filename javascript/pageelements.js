@@ -19,6 +19,7 @@ class PageHeader {
           { text: 'Cards', href: 'sites/card.html' },
           { text: 'Väderapp', href: 'sites/väderapp.html' },
           { text: 'Api', href: 'sites/api.html' },
+          { text: 'Api/fetch', href: 'sites/apifetch.html' },
           
           
         ]
