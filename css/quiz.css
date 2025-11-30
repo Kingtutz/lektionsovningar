@@ -1,0 +1,10 @@
+.quizcard{
+  border: 1px solid black;
+  margin: 24px;
+  padding: 16px;
+}
+.answerbutton{
+  background-color: #6b6d76;
+color: #cbfb7c;
+
+}
