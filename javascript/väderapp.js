@@ -49,7 +49,7 @@ async function getData (input) {
         const result = await response.json()
         const degres = result.main.temp - 273.15
         weatherDiv.append(grader)
-        grader.innerText = degres + 'c'
+        grader.innerText = Math.round(degres) + 'c'
         const iconId = result.weather[0].id
         const weaterCondition = result.weather[0].main
 

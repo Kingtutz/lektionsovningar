@@ -20,7 +20,8 @@ class PageHeader {
           { text: 'Väderapp', href: 'sites/väderapp.html' },
           { text: 'Api', href: 'sites/api.html' },
           { text: 'Api/fetch', href: 'sites/apifetch.html' },
-          { text: 'async', href: 'sites/async.html' }
+          { text: 'async', href: 'sites/async.html' },
+          { text: 'Built in stuffs', href: 'sites/builtinobjects.html' }
         ]
       },
       games: {
