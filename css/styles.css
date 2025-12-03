@@ -18,12 +18,13 @@ header {
       }
       
       header a {
-        margin: 0px 10px;
+        margin: 0px 20px;
         text-decoration: none;
         color: #333;
         padding: 8px 12px;
         border-radius: 4px;
         transition: background-color 0.3s ease;
+        gap: 8px;
       }
       
       header a:hover {
