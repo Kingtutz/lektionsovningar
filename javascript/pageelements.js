@@ -21,7 +21,8 @@ class PageHeader {
           { text: 'Api', href: 'sites/api.html' },
           { text: 'Api/fetch', href: 'sites/apifetch.html' },
           { text: 'async', href: 'sites/async.html' },
-          { text: 'Built in stuffs', href: 'sites/builtinobjects.html' }
+          { text: 'Built in stuffs', href: 'sites/builtinobjects.html' },
+          { text: 'Animate', href: 'sites/animate.html' }
         ]
       },
       games: {
